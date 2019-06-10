@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <pluginGroups>
+  </pluginGroups>
+  <proxies>
+  </proxies>
+  <servers>
+  </servers>
+
+  <mirrors>
+    <mirror>
+      <id>aliyunmaven</id>
+      <mirrorOf>*</mirrorOf>
+      <name>阿里云公共仓库</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+  </mirrors>
+
+  <profiles>
+    <profile>
+      <id>development</id>
+      <repositories>
+        <repository>
+          <id>3m-maven</id>
+          <url>https://cnodc05.mmm.com/repository/maven-public/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>3m-maven</id>
+          <url>https://cnodc05.mmm.com/repository/maven-public/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+   
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>development</activeProfile>
+  </activeProfiles>
+
+</settings>
